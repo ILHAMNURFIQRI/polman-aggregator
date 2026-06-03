@@ -1,0 +1,619 @@
+/* ============================================================
+   POLMAN BANDUNG — DESIGN SYSTEM
+   Versi   : 1.0.0
+   Penulis : Tim Digital Polman Bandung
+   Font    : Poppins (Google Fonts)
+   ============================================================
+
+   DAFTAR ISI
+   1. Color Tokens
+   2. Typography Tokens
+   3. Spacing Tokens
+   4. Border Radius Tokens
+   5. Shadow Tokens
+   6. Transition & Animation Tokens
+   7. Z-Index Tokens
+   8. Grid & Container Tokens
+   9. Reset & Base
+   10. Layout Utilities
+   11. Typography Utilities
+   12. Button Components
+   13. Form Components
+   14. Section Header Components
+   15. Badge Components
+   ============================================================ */
+
+/* ============================================================
+   1. COLOR TOKENS
+   ============================================================
+   Rasional:
+   - Primary Navy (#022a5e / #023780): Warna identitas utama Polman Bandung.
+     Memberikan kesan profesional, akademik, dan berwibawa.
+   - Accent Gold (#ffd13c): Warna kontras energetik yang mewakili
+     keunggulan dan pencapaian. Digunakan untuk CTA, highlight, dan aksen.
+   - Neutral Gray (#82878d): Warna netral untuk teks sekunder dan elemen
+     pendukung. Menjaga hierarki visual tetap jelas.
+   - Semantic Colors: Warna standar untuk status/feedback (sukses, peringatan,
+     error, info) yang meningkatkan aksesibilitas.
+   ============================================================ */
+:root {
+  /* === PRIMARY PALETTE — Deep Navy === */
+  --color-primary-950: #010d1f;
+  --color-primary-900: #011630;
+  --color-primary-800: #022a5e;   /* BRAND PRIMARY DARK — Color 1 */
+  --color-primary-700: #023780;   /* BRAND PRIMARY — Color 2 */
+  --color-primary-600: #0347a3;
+  --color-primary-500: #0557c6;
+  --color-primary-400: #3b82f6;
+  --color-primary-300: #7db3f9;
+  --color-primary-200: #bdd5fc;
+  --color-primary-100: #deeafe;
+  --color-primary-50:  #eff6ff;
+
+  /* === ACCENT PALETTE — Gold === */
+  --color-accent-800: #7a5800;
+  --color-accent-700: #b08200;
+  --color-accent-600: #d9a000;
+  --color-accent-500: #ffd13c;   /* BRAND ACCENT — Color 4 */
+  --color-accent-400: #ffda5f;
+  --color-accent-300: #ffe38a;
+  --color-accent-200: #fff0b8;
+  --color-accent-100: #fffae8;
+  --color-accent-50:  #fffdf5;
+
+  /* === NEUTRAL PALETTE — Gray === */
+  --color-neutral-900: #1a1d20;
+  --color-neutral-800: #2d3035;
+  --color-neutral-700: #4a4e54;
+  --color-neutral-600: #82878d;   /* BRAND NEUTRAL — Color 3 */
+  --color-neutral-500: #9da2a8;
+  --color-neutral-400: #b8bcc1;
+  --color-neutral-300: #d4d7da;
+  --color-neutral-200: #e5e7ea;
+  --color-neutral-100: #f0f2f4;
+  --color-neutral-50:  #f8fafc;
+  --color-white:       #ffffff;
+
+  /* === SEMANTIC COLORS === */
+  --color-success-700: #047857;
+  --color-success-600: #059669;
+  --color-success-500: #10b981;
+  --color-success-100: #d1fae5;
+  --color-success-50:  #ecfdf5;
+
+  --color-warning-700: #b45309;
+  --color-warning-600: #d97706;
+  --color-warning-500: #f59e0b;
+  --color-warning-100: #fef3c7;
+  --color-warning-50:  #fffbeb;
+
+  --color-error-700:   #b91c1c;
+  --color-error-600:   #dc2626;
+  --color-error-500:   #ef4444;
+  --color-error-100:   #fee2e2;
+  --color-error-50:    #fef2f2;
+
+  --color-info-700:    #1d4ed8;
+  --color-info-600:    #2563eb;
+  --color-info-500:    #3b82f6;
+  --color-info-100:    #dbeafe;
+  --color-info-50:     #eff6ff;
+
+  /* ============================================================
+     2. TYPOGRAPHY TOKENS
+     ============================================================
+     Rasional:
+     - Poppins dipilih karena karakternya yang geometris, modern, dan mudah
+       dibaca. Sangat cocok untuk tampilan akademik yang profesional.
+     - Skala tipe menggunakan Major Third (1.25x) untuk hierarki yang jelas.
+     - Line-height relaxed (1.625) meningkatkan keterbacaan teks panjang.
+     ============================================================ */
+  --font-family:      'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-mono: 'Courier New', 'Lucida Console', monospace;
+
+  /* Font Sizes — Major Third Scale */
+  --text-xs:   0.6875rem;  /* 11px */
+  --text-sm:   0.8125rem;  /* 13px */
+  --text-base: 0.9375rem;  /* 15px */
+  --text-md:   1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.25rem;    /* 20px */
+  --text-2xl:  1.5rem;     /* 24px */
+  --text-3xl:  1.875rem;   /* 30px */
+  --text-4xl:  2.25rem;    /* 36px */
+  --text-5xl:  3rem;       /* 48px */
+  --text-6xl:  3.75rem;    /* 60px */
+  --text-7xl:  4.5rem;     /* 72px */
+
+  /* Font Weights */
+  --font-light:     300;
+  --font-regular:   400;
+  --font-medium:    500;
+  --font-semibold:  600;
+  --font-bold:      700;
+  --font-extrabold: 800;
+  --font-black:     900;
+
+  /* Line Heights */
+  --leading-none:    1;
+  --leading-tight:   1.25;
+  --leading-snug:    1.375;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose:   2;
+
+  /* Letter Spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight:   -0.025em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.025em;
+  --tracking-wider:   0.05em;
+  --tracking-widest:  0.1em;
+
+  /* ============================================================
+     3. SPACING TOKENS
+     ============================================================
+     Rasional:
+     - Basis 4px (0.25rem) mengikuti standar Material Design & Tailwind.
+     - Konsistensi spacing menciptakan ritme visual yang harmonis.
+     ============================================================ */
+  --space-px:  1px;
+  --space-0:   0;
+  --space-1:   0.25rem;   /* 4px */
+  --space-2:   0.5rem;    /* 8px */
+  --space-3:   0.75rem;   /* 12px */
+  --space-4:   1rem;      /* 16px */
+  --space-5:   1.25rem;   /* 20px */
+  --space-6:   1.5rem;    /* 24px */
+  --space-7:   1.75rem;   /* 28px */
+  --space-8:   2rem;      /* 32px */
+  --space-9:   2.25rem;   /* 36px */
+  --space-10:  2.5rem;    /* 40px */
+  --space-12:  3rem;      /* 48px */
+  --space-14:  3.5rem;    /* 56px */
+  --space-16:  4rem;      /* 64px */
+  --space-20:  5rem;      /* 80px */
+  --space-24:  6rem;      /* 96px */
+  --space-28:  7rem;      /* 112px */
+  --space-32:  8rem;      /* 128px */
+
+  /* ============================================================
+     4. BORDER RADIUS TOKENS
+     ============================================================
+     Rasional:
+     - Radius sedang (md/lg) memberikan kesan modern tanpa terlalu playful.
+     - Radius penuh (full) untuk badge, chip, dan elemen interaktif kecil.
+     ============================================================ */
+  --radius-none: 0;
+  --radius-sm:   0.25rem;  /* 4px */
+  --radius-md:   0.5rem;   /* 8px */
+  --radius-lg:   0.75rem;  /* 12px */
+  --radius-xl:   1rem;     /* 16px */
+  --radius-2xl:  1.5rem;   /* 24px */
+  --radius-3xl:  2rem;     /* 32px */
+  --radius-full: 9999px;
+
+  /* ============================================================
+     5. SHADOW TOKENS
+     ============================================================
+     Rasional:
+     - Shadow menggunakan warna navy (bukan hitam) untuk kohesi visual.
+     - Gradasi xs→2xl memberi fleksibilitas untuk kedalaman elemen.
+     - Shadow primary/accent untuk tombol agar selaras dengan brand.
+     ============================================================ */
+  --shadow-xs:      0 1px 2px rgba(2, 42, 94, 0.04);
+  --shadow-sm:      0 2px 4px rgba(2, 42, 94, 0.06);
+  --shadow-md:      0 4px 12px rgba(2, 42, 94, 0.08);
+  --shadow-lg:      0 8px 24px rgba(2, 42, 94, 0.10);
+  --shadow-xl:      0 16px 40px rgba(2, 42, 94, 0.12);
+  --shadow-2xl:     0 24px 60px rgba(2, 42, 94, 0.16);
+  --shadow-primary: 0 4px 20px rgba(2, 55, 128, 0.28);
+  --shadow-accent:  0 4px 20px rgba(255, 209, 60, 0.40);
+  --shadow-inset:   inset 0 2px 4px rgba(0, 0, 0, 0.06);
+
+  /* ============================================================
+     6. TRANSITION & ANIMATION TOKENS
+     ============================================================ */
+  /* Easing Functions */
+  --ease-in:      cubic-bezier(0.4, 0, 1, 1);
+  --ease-out:     cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out:  cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-spring:  cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  /* Durations */
+  --duration-75:   75ms;
+  --duration-100:  100ms;
+  --duration-150:  150ms;
+  --duration-200:  200ms;
+  --duration-300:  300ms;
+  --duration-500:  500ms;
+  --duration-700:  700ms;
+  --duration-1000: 1000ms;
+
+  /* ============================================================
+     7. Z-INDEX TOKENS
+     ============================================================ */
+  --z-behind:         -1;
+  --z-base:           0;
+  --z-raised:         1;
+  --z-dropdown:       100;
+  --z-sticky:         200;
+  --z-fixed:          300;
+  --z-modal-backdrop: 400;
+  --z-modal:          500;
+  --z-popover:        600;
+  --z-tooltip:        700;
+  --z-toast:          800;
+
+  /* ============================================================
+     8. GRID & CONTAINER TOKENS
+     ============================================================ */
+  --container-sm:      640px;
+  --container-md:      768px;
+  --container-lg:      1024px;
+  --container-xl:      1280px;
+  --container-2xl:     1440px;
+  --container-padding: 1.5rem;
+  --grid-cols:         12;
+  --grid-gap:          1.5rem;
+}
+
+/* ============================================================
+   9. RESET & BASE STYLES
+   ============================================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--text-base);
+  font-weight: var(--font-regular);
+  line-height: var(--leading-normal);
+  color: var(--color-neutral-900);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img, video, svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-family);
+  border: none;
+  background: none;
+  outline: none;
+}
+
+input, textarea, select {
+  font-family: var(--font-family);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+}
+
+/* Focus visible untuk aksesibilitas */
+:focus-visible {
+  outline: 3px solid var(--color-accent-500);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-primary-200);
+  color: var(--color-primary-900);
+}
+
+/* Scrollbar kustom */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-neutral-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-700);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-800);
+}
+
+/* ============================================================
+   10. LAYOUT UTILITIES
+   ============================================================ */
+.container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.section {
+  padding: var(--space-20) 0;
+}
+
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.gap-2 { gap: var(--space-2); }
+.gap-4 { gap: var(--space-4); }
+.gap-6 { gap: var(--space-6); }
+
+/* ============================================================
+   11. TYPOGRAPHY UTILITIES
+   ============================================================ */
+.text-primary   { color: var(--color-primary-800); }
+.text-accent    { color: var(--color-accent-500); }
+.text-neutral   { color: var(--color-neutral-600); }
+.text-white     { color: var(--color-white); }
+.text-dark      { color: var(--color-neutral-900); }
+.text-center    { text-align: center; }
+.font-bold      { font-weight: var(--font-bold); }
+.font-semibold  { font-weight: var(--font-semibold); }
+
+/* ============================================================
+   12. BUTTON COMPONENTS
+   ============================================================
+   Rasional:
+   - Tombol menggunakan padding vertikal & horizontal yang proporsional
+     untuk target sentuh minimum 44px (WCAG 2.1 guideline).
+   - Setiap tombol memiliki state hover dengan transform translateY(-2px)
+     untuk memberikan feedback visual yang jelas.
+   - Border transparan pada semua tombol agar konsisten saat diberi border.
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-family);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--duration-200) var(--ease-out);
+  border: 2px solid transparent;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  min-height: 44px;
+}
+
+.btn-sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-xs);
+  min-height: 36px;
+}
+
+.btn-lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-base);
+  border-radius: var(--radius-xl);
+  min-height: 52px;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* Primary — Navy */
+.btn-primary {
+  background: var(--color-primary-700);
+  color: var(--color-white);
+  border-color: var(--color-primary-700);
+  box-shadow: var(--shadow-primary);
+}
+.btn-primary:hover {
+  background: var(--color-primary-800);
+  border-color: var(--color-primary-800);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(2, 55, 128, 0.38);
+}
+.btn-primary:active { transform: translateY(0); }
+
+/* Accent — Gold */
+.btn-accent {
+  background: var(--color-accent-500);
+  color: var(--color-primary-800);
+  border-color: var(--color-accent-500);
+  box-shadow: var(--shadow-accent);
+  font-weight: var(--font-bold);
+}
+.btn-accent:hover {
+  background: var(--color-accent-400);
+  border-color: var(--color-accent-400);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(255, 209, 60, 0.55);
+}
+.btn-accent:active { transform: translateY(0); }
+
+/* Outline Primary */
+.btn-primary-outline {
+  background: transparent;
+  color: var(--color-primary-700);
+  border-color: var(--color-primary-700);
+}
+.btn-primary-outline:hover {
+  background: var(--color-primary-700);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-primary);
+}
+
+/* Outline White */
+.btn-outline-white {
+  background: transparent;
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(4px);
+}
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* Outline Primary Alt */
+.btn-outline-primary {
+  background: transparent;
+  color: var(--color-primary-700);
+  border-color: var(--color-primary-300);
+}
+.btn-outline-primary:hover {
+  background: var(--color-primary-50);
+  border-color: var(--color-primary-700);
+  transform: translateY(-2px);
+}
+
+/* Ghost */
+.btn-ghost {
+  background: transparent;
+  color: var(--color-neutral-600);
+  border-color: var(--color-neutral-300);
+}
+.btn-ghost:hover {
+  background: var(--color-neutral-100);
+  color: var(--color-neutral-900);
+}
+
+/* ============================================================
+   13. FORM COMPONENTS
+   ============================================================ */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-neutral-700);
+}
+
+.required { color: var(--color-error-500); }
+
+.form-control {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 2px solid var(--color-neutral-200);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-family);
+  font-size: var(--text-sm);
+  color: var(--color-neutral-900);
+  background: var(--color-white);
+  transition: all var(--duration-200) var(--ease-out);
+  outline: none;
+  min-height: 44px;
+}
+.form-control:focus {
+  border-color: var(--color-primary-700);
+  box-shadow: 0 0 0 3px rgba(2, 55, 128, 0.10);
+}
+.form-control::placeholder { color: var(--color-neutral-400); }
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+select.form-control {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2382878d' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right var(--space-4) center;
+  background-size: 1rem;
+  padding-right: var(--space-10);
+}
+
+/* ============================================================
+   14. SECTION HEADER COMPONENT
+   ============================================================ */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.section-title {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary-800);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-4);
+}
+
+.section-title.white { color: var(--color-white); }
+
+.section-subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-neutral-600);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: var(--leading-relaxed);
+}
+
+.section-subtitle.white { color: rgba(255, 255, 255, 0.75); }
+
+.section-footer {
+  text-align: center;
+  margin-top: var(--space-10);
+}
+
+/* ============================================================
+   15. BADGE COMPONENT
+   ============================================================ */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-primary-50);
+  color: var(--color-primary-700);
+  border: 1px solid var(--color-primary-200);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+
+.section-badge.dark {
+  background: rgba(255, 209, 60, 0.12);
+  color: var(--color-accent-500);
+  border-color: rgba(255, 209, 60, 0.28);
+}
