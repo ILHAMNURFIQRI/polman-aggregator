@@ -247,21 +247,22 @@
           </p>
         </div>
 
-        <!-- Polman Silhouette Watermark -->
+        <!-- Polman 3D Logo Silhouette Watermark (kanan, miring 45°) -->
         <img
-          src="assets/Polman.abu.png"
+          src="assets/polman3d.png"
           alt=""
           aria-hidden="true"
           style="
             position: absolute;
-            left: 1300px;
+            right: -60px;
             top: 50%;
-            transform: translateY(50%) rotate(-45deg);
-            width: clamp(220px, 22vw, 380px);
+            transform: translateY(-50%) rotate(45deg);
+            width: clamp(260px, 26vw, 440px);
             height: auto;
             z-index: 0;
-            opacity: 0.07;
+            opacity: 0.09;
             pointer-events: none;
+            filter: drop-shadow(0 8px 24px rgba(20,34,64,0.10));
           "
         />
 
@@ -386,8 +387,69 @@
     </section>
 
     <!-- 4. BERITA TERKINI SECTION -->
-    <section class="section news-section" id="berita">
-      <div class="container">
+    <section class="section news-section" id="berita" style="position: relative; overflow: hidden;">
+
+      <!-- SVG Monogram Dekoratif (kanan atas, siluet geometris) -->
+      <svg
+        aria-hidden="true"
+        width="420"
+        height="420"
+        viewBox="0 0 500 500"
+        xmlns="http://www.w3.org/2000/svg"
+        style="
+          position: absolute;
+          top: -30px;
+          right: -60px;
+          opacity: 0.13;
+          pointer-events: none;
+          z-index: 0;
+          transform: rotate(8deg);
+        "
+      >
+        <style>.mngrm{fill:none;stroke:#142240;stroke-width:3;}</style>
+
+        <!-- Kiri Atas -->
+        <g class="mngrm">
+          <rect x="40" y="40" width="100" height="100"/>
+          <path d="M40 90 H140"/>
+          <path d="M90 40 V140"/>
+          <path d="M90 90 A50 50 0 0 1 140 40"/>
+        </g>
+
+        <!-- Kanan Atas -->
+        <g class="mngrm">
+          <rect x="300" y="60" width="100" height="100"/>
+          <path d="M350 60 V160"/>
+          <path d="M300 110 H400"/>
+          <path d="M300 160 A50 50 0 0 1 350 110"/>
+        </g>
+
+        <!-- Tengah -->
+        <g class="mngrm">
+          <rect x="180" y="180" width="140" height="140"/>
+          <path d="M180 250 H320"/>
+          <path d="M250 180 V320"/>
+          <circle cx="250" cy="250" r="35"/>
+        </g>
+
+        <!-- Kiri Bawah -->
+        <g class="mngrm">
+          <rect x="70" y="320" width="120" height="120"/>
+          <path d="M70 380 H190"/>
+          <path d="M130 320 V440"/>
+          <path d="M70 320 A60 60 0 0 1 130 380"/>
+        </g>
+
+        <!-- Kanan Bawah -->
+        <g class="mngrm">
+          <rect x="320" y="300" width="120" height="120"/>
+          <path d="M380 300 V420"/>
+          <path d="M320 360 H440"/>
+          <path d="M380 360 A60 60 0 0 1 440 420"/>
+        </g>
+      </svg>
+
+      <div class="container" style="position: relative; z-index: 1;">
         <div class="section-header">
           <span class="section-badge" data-i18n="news_badge"
             >Informasi Terkini</span
@@ -515,8 +577,69 @@
     </section>
 
     <!-- 5. AGENDA / CALENDAR SECTION -->
-    <section class="section agenda-section" id="agenda">
-      <div class="container">
+    <section class="section agenda-section" id="agenda" style="position: relative; overflow: hidden;">
+
+      <!-- SVG Siluet Grid-Monogram (kiri bawah, lurus) -->
+      <svg
+        aria-hidden="true"
+        width="380"
+        height="380"
+        viewBox="0 0 600 600"
+        xmlns="http://www.w3.org/2000/svg"
+        style="
+          position: absolute;
+          bottom: -40px;
+          left: -50px;
+          opacity: 0.12;
+          pointer-events: none;
+          z-index: 0;
+        "
+      >
+        <!-- Grid -->
+        <g style="fill:none;stroke:#142240;stroke-width:1;">
+          <path d="M75 0V600"/>
+          <path d="M150 0V600"/>
+          <path d="M225 0V600"/>
+          <path d="M300 0V600"/>
+          <path d="M375 0V600"/>
+          <path d="M450 0V600"/>
+          <path d="M525 0V600"/>
+          <path d="M0 75H600"/>
+          <path d="M0 150H600"/>
+          <path d="M0 225H600"/>
+          <path d="M0 300H600"/>
+          <path d="M0 375H600"/>
+          <path d="M0 450H600"/>
+          <path d="M0 525H600"/>
+        </g>
+
+        <!-- Monogram -->
+        <g style="fill:none;stroke:#142240;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;">
+          <!-- Frame -->
+          <rect x="75" y="75" width="450" height="450"/>
+          <!-- Atas -->
+          <path d="M225 75 A75 75 0 0 1 300 150 A75 75 0 0 1 375 75"/>
+          <path d="M225 150 A75 75 0 0 1 300 225 A75 75 0 0 1 375 150"/>
+          <!-- Tengah Diamond -->
+          <path d="M225 225 A75 75 0 0 1 300 300"/>
+          <path d="M300 300 A75 75 0 0 1 375 225"/>
+          <path d="M225 375 A75 75 0 0 0 300 300"/>
+          <path d="M300 300 A75 75 0 0 0 375 375"/>
+          <!-- Kiri -->
+          <path d="M75 225 H150 V300 A75 75 0 0 0 225 375"/>
+          <path d="M75 375 H225 A75 75 0 0 1 150 450 H75"/>
+          <!-- Kanan -->
+          <path d="M375 375 A75 75 0 0 1 300 450"/>
+          <path d="M300 450 H525"/>
+          <path d="M450 375V450"/>
+          <!-- Bawah -->
+          <path d="M225 525 A75 75 0 0 0 300 450"/>
+          <path d="M375 525 A75 75 0 0 1 300 450"/>
+        </g>
+      </svg>
+
+      <div class="container" style="position: relative; z-index: 1;">
+
         <div class="section-header">
           <span class="section-badge" data-i18n="agenda_badge"
             >Kalender Akademik</span
@@ -592,7 +715,7 @@
             </div>
             <div class="cta-actions">
               <a
-                href="#"
+                href="mailto:it-support@polman-bandung.ac.id?subject=Tiket%20Bantuan%20Teknis&body=Nama%20:%20%0APesan%20:%20%0ASistem%20yang%20bermasalah%20:%20"
                 class="btn btn-accent btn-lg font-bold"
                 data-i18n="help_btn_ticket"
               >
@@ -699,23 +822,23 @@
               Tautan Cepat
             </h3>
             <div class="footer-links">
-              <a href="#" class="footer-link"
+              <a href="https://www.polman-bandung.ac.id/" target="_blank" rel="noopener" class="footer-link"
                 ><i class="fas fa-chevron-right"></i>
                 <span data-i18n="footer_link_main">Website Utama</span></a
               >
-              <a href="#" class="footer-link"
+              <a href="https://pmb.polman-bandung.ac.id/" target="_blank" rel="noopener" class="footer-link"
                 ><i class="fas fa-chevron-right"></i>
                 <span data-i18n="footer_link_pmb">PMB Polman</span></a
               >
-              <a href="#" class="footer-link"
+              <a href="https://e-perpustakaan.polman-bandung.ac.id/" target="_blank" rel="noopener" class="footer-link"
                 ><i class="fas fa-chevron-right"></i>
                 <span data-i18n="footer_link_lib">Perpustakaan</span></a
               >
-              <a href="#" class="footer-link"
+              <a href="https://alumni.polman-bandung.ac.id/" target="_blank" rel="noopener" class="footer-link"
                 ><i class="fas fa-chevron-right"></i>
-                <span data-i18n="footer_link_career">Karir & Alumni</span></a
+                <span data-i18n="footer_link_career">Karir &amp; Alumni</span></a
               >
-              <a href="#" class="footer-link"
+              <a href="https://jtrm.polman-bandung.ac.id/" target="_blank" rel="noopener" class="footer-link"
                 ><i class="fas fa-chevron-right"></i>
                 <span data-i18n="footer_link_journal">Jurnal Ilmiah</span></a
               >
