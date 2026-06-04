@@ -1,503 +1,862 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portal Agregator Polman Bandung - Akses cepat ke berbagai layanan digital dan aplikasi Polman Bandung.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portal Agregator Polman Bandung - Akses cepat ke berbagai layanan digital dan aplikasi Polman Bandung."
+    />
     <title>Polman Bandung | Portal Layanan Digital</title>
-    
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Font Awesome untuk Ikon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <!-- CSS -->
-    <link rel="stylesheet" href="css/design-system.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/design-system.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <!-- 1. HEADER & NAVIGATION -->
     <header class="header" id="header">
-        <div class="header-container">
-            <a href="#" class="brand">
-                <img src="assets/logo.polman.jpeg" alt="Logo Polman Bandung" class="brand-logo" style="border-radius: var(--radius-md);">
-                <div class="brand-text">
-                    <span class="brand-title">POLMAN BANDUNG</span>
-                    <span class="brand-subtitle">Portal Layanan Digital</span>
-                </div>
-            </a>
-            
-            <nav class="nav-menu" id="nav-menu">
-                <a href="#beranda" class="nav-link active" data-i18n="nav_home">Beranda</a>
-                <a href="#aplikasi" class="nav-link" data-i18n="nav_services">Layanan & Aplikasi</a>
-                <a href="#berita" class="nav-link" data-i18n="nav_news">Berita Terkini</a>
-                <a href="#agenda" class="nav-link" data-i18n="nav_agenda">Agenda</a>
-            </nav>
-            
-            <div class="header-actions">
-                <button class="search-btn" aria-label="Pencarian">
-                    <i class="fas fa-search"></i>
-                </button>
-                <a href="#helpdesk" class="btn btn-accent">
-                    <i class="fas fa-headset"></i> Help Desk
-                </a>
-                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Buka menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+      <div class="header-container">
+        <a href="#" class="brand">
+          <img
+            src="assets/logo.polman.jpeg"
+            alt="Logo Polman Bandung"
+            class="brand-logo"
+            style="border-radius: var(--radius-md)"
+          />
+          <div class="brand-text">
+            <span class="brand-title">POLMAN BANDUNG</span>
+            <span class="brand-subtitle">Portal Layanan Digital</span>
+          </div>
+        </a>
+
+        <nav class="nav-menu" id="nav-menu">
+          <a href="#beranda" class="nav-link active" data-i18n="nav_home"
+            >Beranda</a
+          >
+          <a href="#aplikasi" class="nav-link" data-i18n="nav_services"
+            >Layanan & Aplikasi</a
+          >
+          <a href="#berita" class="nav-link" data-i18n="nav_news"
+            >Berita Terkini</a
+          >
+          <a href="#agenda" class="nav-link" data-i18n="nav_agenda">Agenda</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="search-btn" aria-label="Pencarian">
+            <i class="fas fa-search"></i>
+          </button>
+          <a href="#helpdesk" class="btn btn-accent">
+            <i class="fas fa-headset"></i> Help Desk
+          </a>
+          <button
+            class="mobile-menu-btn"
+            id="mobile-menu-btn"
+            aria-label="Buka menu"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
+      </div>
     </header>
 
     <!-- 2. HERO SECTION -->
     <section class="hero" id="beranda">
-        <!-- SVG Geometri dari Pengguna sebagai Background -->
-        <svg class="hero-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
-            <rect width="1200" height="300" fill="#F8FAFC" />
-            <rect x="0" y="0" width="100" height="100" fill="#142240" />
-            <path d="M 100,0 A 100,100 0 0,1 0,100 L 100,100 Z" fill="#6F747A" />
-            <path d="M 100,0 L 200,100 H 100 Z" fill="#3B82F6" />
-            <circle cx="250" cy="50" r="50" fill="#A5ACB5" />
-            <rect x="300" y="0" width="100" height="100" fill="#142240" />
-            <circle cx="300" cy="0" r="100" fill="#F8FAFC" />
-            <rect x="400" y="0" width="100" height="100" fill="#6F747A" />
-            <path d="M 500,100 A 50,50 0 0,1 600,100 Z" fill="#3B82F6" />
-            <path d="M 600,0 L 700,0 L 700,100 Z" fill="#142240" />
-            <circle cx="750" cy="50" r="50" fill="#3B82F6" />
-            <rect x="800" y="0" width="100" height="100" fill="#A5ACB5" />
-            <path d="M 900,0 A 100,100 0 0,0 1000,100 L 1000,0 Z" fill="#142240" />
-            <path d="M 1000,100 L 1100,0 V 100 Z" fill="#6F747A" />
-            <rect x="1100" y="0" width="100" height="100" fill="#3B82F6" />
-            <path d="M 0,100 A 100,100 0 0,0 100,200 V 100 Z" fill="#3B82F6" />
-            <rect x="100" y="100" width="100" height="100" fill="#142240" />
-            <path d="M 200,100 L 300,200 V 100 Z" fill="#6F747A" />
-            <circle cx="350" cy="150" r="50" fill="#3B82F6" />
-            <path d="M 400,100 H 500 V 200 Z" fill="#142240" />
-            <rect x="500" y="100" width="100" height="100" fill="#A5ACB5" />
-            <circle cx="650" cy="150" r="50" fill="#6F747A" />
-            <path d="M 700,200 A 100,100 0 0,1 800,100 H 700 Z" fill="#142240" />
-            <path d="M 800,100 L 900,200 H 800 Z" fill="#3B82F6" />
-            <rect x="900" y="100" width="100" height="100" fill="#142240" />
-            <circle cx="1000" cy="200" r="100" fill="#F8FAFC" />
-            <path d="M 1100,100 A 100,100 0 0,0 1200,200 V 100 Z" fill="#A5ACB5" />
-            <rect x="0" y="200" width="100" height="100" fill="#6F747A" />
-            <path d="M 100,200 A 100,100 0 0,1 200,300 L 100,300 Z" fill="#142240" />
-            <rect x="200" y="200" width="100" height="100" fill="#3B82F6" />
-            <path d="M 300,300 L 400,200 H 300 Z" fill="#A5ACB5" />
-            <circle cx="450" cy="250" r="50" fill="#142240" />
-            <path d="M 500,200 A 100,100 0 0,0 600,300 V 200 Z" fill="#3B82F6" />
-            <rect x="600" y="200" width="100" height="100" fill="#142240" />
-            <path d="M 700,200 L 800,300 V 200 Z" fill="#6F747A" />
-            <circle cx="850" cy="250" r="50" fill="#A5ACB5" />
-            <path d="M 900,300 A 100,100 0 0,1 1000,200 L 900,200 Z" fill="#3B82F6" />
-            <rect x="1000" y="200" width="100" height="100" fill="#142240" />
-            <path d="M 1100,200 L 1200,300 H 1100 Z" fill="#6F747A" />
-        </svg>
-        <div class="hero-overlay"></div>
-        
-        <div class="container hero-container">
-            <div class="hero-content">
-                <span class="hero-badge"><i class="fas fa-star"></i> <span data-i18n="hero_badge">Sistem Terpusat</span></span>
-                <h1 class="hero-title" data-i18n="hero_title">Satu Pintu Untuk Semua <span>Layanan Digital</span> Polman</h1>
-                <p class="hero-desc" data-i18n="hero_desc">
-                    Akses cepat dan mudah ke Sistem Informasi Akademik, Kepegawaian, Keuangan, Logistik, dan layanan digital lainnya di Politeknik Manufaktur Bandung.
-                </p>
-                <div class="hero-actions">
-                    <a href="#aplikasi" class="btn btn-accent btn-lg" data-i18n="btn_explore_services">Jelajahi Layanan <i class="fas fa-arrow-right"></i></a>
-                    <a href="https://panduan.polman-bandung.ac.id/" target="_blank" class="btn btn-outline-white btn-lg" data-i18n="btn_view_guide">Lihat Panduan</a>
-                </div>
-            </div>
-            
-            <div class="hero-illustration">
-                <!-- Menggunakan mockup 3D dashboard atau ilustrasi yang relevan -->
-                <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-image">
-                    <rect x="50" y="50" width="400" height="280" rx="16" fill="#F8FAFC" stroke="#ffffff" stroke-width="4" />
-                    <rect x="50" y="50" width="400" height="50" rx="16" fill="#E5E7EA" />
-                    <circle cx="80" cy="75" r="6" fill="#EF4444" />
-                    <circle cx="100" cy="75" r="6" fill="#F59E0B" />
-                    <circle cx="120" cy="75" r="6" fill="#10B981" />
-                    <rect x="80" y="130" width="100" height="80" rx="8" fill="#DBEAFE" />
-                    <rect x="200" y="130" width="100" height="80" rx="8" fill="#FEE2E2" />
-                    <rect x="320" y="130" width="100" height="80" rx="8" fill="#FEF3C7" />
-                    <rect x="80" y="240" width="340" height="60" rx="8" fill="#E5E7EA" />
-                </svg>
-            </div>
+      <!-- SVG Geometri dari Pengguna sebagai Background -->
+      <svg
+        class="hero-bg"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 300"
+        width="100%"
+        height="100%"
+        preserveAspectRatio="xMidYMid slice"
+      >
+        <rect width="1200" height="300" fill="#F8FAFC" />
+        <rect x="0" y="0" width="100" height="100" fill="#142240" />
+        <path d="M 100,0 A 100,100 0 0,1 0,100 L 100,100 Z" fill="#6F747A" />
+        <path d="M 100,0 L 200,100 H 100 Z" fill="#3B82F6" />
+        <circle cx="250" cy="50" r="50" fill="#A5ACB5" />
+        <rect x="300" y="0" width="100" height="100" fill="#142240" />
+        <circle cx="300" cy="0" r="100" fill="#F8FAFC" />
+        <rect x="400" y="0" width="100" height="100" fill="#6F747A" />
+        <path d="M 500,100 A 50,50 0 0,1 600,100 Z" fill="#3B82F6" />
+        <path d="M 600,0 L 700,0 L 700,100 Z" fill="#142240" />
+        <circle cx="750" cy="50" r="50" fill="#3B82F6" />
+        <rect x="800" y="0" width="100" height="100" fill="#A5ACB5" />
+        <path d="M 900,0 A 100,100 0 0,0 1000,100 L 1000,0 Z" fill="#142240" />
+        <path d="M 1000,100 L 1100,0 V 100 Z" fill="#6F747A" />
+        <rect x="1100" y="0" width="100" height="100" fill="#3B82F6" />
+        <path d="M 0,100 A 100,100 0 0,0 100,200 V 100 Z" fill="#3B82F6" />
+        <rect x="100" y="100" width="100" height="100" fill="#142240" />
+        <path d="M 200,100 L 300,200 V 100 Z" fill="#6F747A" />
+        <circle cx="350" cy="150" r="50" fill="#3B82F6" />
+        <path d="M 400,100 H 500 V 200 Z" fill="#142240" />
+        <rect x="500" y="100" width="100" height="100" fill="#A5ACB5" />
+        <circle cx="650" cy="150" r="50" fill="#6F747A" />
+        <path d="M 700,200 A 100,100 0 0,1 800,100 H 700 Z" fill="#142240" />
+        <path d="M 800,100 L 900,200 H 800 Z" fill="#3B82F6" />
+        <rect x="900" y="100" width="100" height="100" fill="#142240" />
+        <circle cx="1000" cy="200" r="100" fill="#F8FAFC" />
+        <path d="M 1100,100 A 100,100 0 0,0 1200,200 V 100 Z" fill="#A5ACB5" />
+        <rect x="0" y="200" width="100" height="100" fill="#6F747A" />
+        <path
+          d="M 100,200 A 100,100 0 0,1 200,300 L 100,300 Z"
+          fill="#142240"
+        />
+        <rect x="200" y="200" width="100" height="100" fill="#3B82F6" />
+        <path d="M 300,300 L 400,200 H 300 Z" fill="#A5ACB5" />
+        <circle cx="450" cy="250" r="50" fill="#142240" />
+        <path d="M 500,200 A 100,100 0 0,0 600,300 V 200 Z" fill="#3B82F6" />
+        <rect x="600" y="200" width="100" height="100" fill="#142240" />
+        <path d="M 700,200 L 800,300 V 200 Z" fill="#6F747A" />
+        <circle cx="850" cy="250" r="50" fill="#A5ACB5" />
+        <path
+          d="M 900,300 A 100,100 0 0,1 1000,200 L 900,200 Z"
+          fill="#3B82F6"
+        />
+        <rect x="1000" y="200" width="100" height="100" fill="#142240" />
+        <path d="M 1100,200 L 1200,300 H 1100 Z" fill="#6F747A" />
+      </svg>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="hero-badge"
+            ><i class="fas fa-star"></i>
+            <span data-i18n="hero_badge">Sistem Terpusat</span></span
+          >
+          <h1 class="hero-title" data-i18n="hero_title">
+            Satu Pintu Untuk Semua <span>Layanan Digital</span> Polman
+          </h1>
+          <p class="hero-desc" data-i18n="hero_desc">
+            Akses cepat dan mudah ke Sistem Informasi Akademik, Kepegawaian,
+            Keuangan, Logistik, dan layanan digital lainnya di Politeknik
+            Manufaktur Bandung.
+          </p>
+          <div class="hero-actions">
+            <a
+              href="#aplikasi"
+              class="btn btn-accent btn-lg"
+              data-i18n="btn_explore_services"
+              >Jelajahi Layanan <i class="fas fa-arrow-right"></i
+            ></a>
+            <a
+              href="https://panduan.polman-bandung.ac.id/"
+              target="_blank"
+              class="btn btn-outline-white btn-lg"
+              data-i18n="btn_view_guide"
+              >Lihat Panduan</a
+            >
+          </div>
         </div>
+
+        <div class="hero-illustration">
+          <!-- Menggunakan mockup 3D dashboard atau ilustrasi yang relevan -->
+          <svg
+            viewBox="0 0 500 400"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="hero-image"
+          >
+            <rect
+              x="50"
+              y="50"
+              width="400"
+              height="280"
+              rx="16"
+              fill="#F8FAFC"
+              stroke="#ffffff"
+              stroke-width="4"
+            />
+            <rect
+              x="50"
+              y="50"
+              width="400"
+              height="50"
+              rx="16"
+              fill="#E5E7EA"
+            />
+            <circle cx="80" cy="75" r="6" fill="#EF4444" />
+            <circle cx="100" cy="75" r="6" fill="#F59E0B" />
+            <circle cx="120" cy="75" r="6" fill="#10B981" />
+            <rect
+              x="80"
+              y="130"
+              width="100"
+              height="80"
+              rx="8"
+              fill="#DBEAFE"
+            />
+            <rect
+              x="200"
+              y="130"
+              width="100"
+              height="80"
+              rx="8"
+              fill="#FEE2E2"
+            />
+            <rect
+              x="320"
+              y="130"
+              width="100"
+              height="80"
+              rx="8"
+              fill="#FEF3C7"
+            />
+            <rect
+              x="80"
+              y="240"
+              width="340"
+              height="60"
+              rx="8"
+              fill="#E5E7EA"
+            />
+          </svg>
+        </div>
+      </div>
     </section>
 
     <!-- 3. APLIKASI / LAYANAN SECTION -->
     <section class="section apps-section" id="aplikasi">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge" data-i18n="section_badge_directory">Direktori Sistem</span>
-                <h2 class="section-title" data-i18n="section_title_services">Layanan Akademik & Administrasi</h2>
-                <p class="section-subtitle" data-i18n="section_subtitle_services">
-                    Akses cepat ke berbagai aplikasi utama untuk menunjang kegiatan belajar mengajar dan administrasi di kampus.
-                </p>
-            </div>
-            
-            <div class="apps-grid">
-                <!-- App Card 1: Akademik -->
-                <a href="https://akademik.polman-bandung.ac.id/" target="_blank" class="app-card">
-                    <div class="app-icon-wrapper">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="app-title" data-i18n="app_1_title">Sistem Akademik</h3>
-                    <p class="app-desc" data-i18n="app_1_desc">Portal informasi dan administrasi akademik bagi mahasiswa dan dosen Politeknik Manufaktur Bandung.</p>
-                    <span class="app-link" data-i18n="app_1_link">Akses Sistem <i class="fas fa-arrow-right"></i></span>
-                </a>
-                
-                <!-- App Card 2: LMS -->
-                <a href="https://belajar.polman-bandung.ac.id/" target="_blank" class="app-card">
-                    <div class="app-icon-wrapper">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3 class="app-title" data-i18n="app_2_title">LMS Belajar Polman</h3>
-                    <p class="app-desc" data-i18n="app_2_desc">Learning Management System untuk mendukung proses pembelajaran daring yang interaktif dan efektif.</p>
-                    <span class="app-link" data-i18n="app_2_link">Masuk ke Kelas <i class="fas fa-arrow-right"></i></span>
-                </a>
-                
-                <!-- App Card 3: Kepegawaian -->
-                <a href="https://kepegawaian.polman-bandung.ac.id/" target="_blank" class="app-card">
-                    <div class="app-icon-wrapper">
-                        <i class="fas fa-id-badge"></i>
-                    </div>
-                    <h3 class="app-title" data-i18n="app_3_title">Kepegawaian</h3>
-                    <p class="app-desc" data-i18n="app_3_desc">Sistem informasi untuk pengelolaan data SDM, presensi, dan layanan administrasi kepegawaian internal.</p>
-                    <span class="app-link" data-i18n="app_3_link">Akses Sistem <i class="fas fa-arrow-right"></i></span>
-                </a>
-                
-                <!-- App Card 4: Keuangan -->
-                <a href="https://keuangan.polman-bandung.ac.id/tentang-baak/" target="_blank" class="app-card">
-                    <div class="app-icon-wrapper">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                    </div>
-                    <h3 class="app-title" data-i18n="app_4_title">Keuangan BAAK</h3>
-                    <p class="app-desc" data-i18n="app_4_desc">Portal layanan administrasi keuangan, informasi pembayaran UKT, dan layanan kebendaharaan.</p>
-                    <span class="app-link" data-i18n="app_4_link">Akses Sistem <i class="fas fa-arrow-right"></i></span>
-                </a>
-                
-                <!-- App Card 5: Logistik -->
-                <a href="https://logistik.polman-bandung.ac.id/" target="_blank" class="app-card">
-                    <div class="app-icon-wrapper">
-                        <i class="fas fa-boxes-stacked"></i>
-                    </div>
-                    <h3 class="app-title" data-i18n="app_5_title">Sistem Logistik</h3>
-                    <p class="app-desc" data-i18n="app_5_desc">Pengelolaan inventaris, peminjaman alat praktik, dan pengadaan barang kebutuhan kampus.</p>
-                    <span class="app-link" data-i18n="app_5_link">Akses Sistem <i class="fas fa-arrow-right"></i></span>
-                </a>
-                
-                <!-- App Card 6: User Guide -->
-                <a href="https://panduan.polman-bandung.ac.id/" target="_blank" class="app-card">
-                    <div class="app-icon-wrapper">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <h3 class="app-title" data-i18n="app_6_title">Panduan Pengguna</h3>
-                    <p class="app-desc" data-i18n="app_6_desc">Dokumentasi lengkap dan tata cara penggunaan berbagai sistem digital di lingkungan Polman Bandung.</p>
-                    <span class="app-link" data-i18n="app_6_link">Baca Panduan <i class="fas fa-arrow-right"></i></span>
-                </a>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="section_badge_directory"
+            >Direktori Sistem</span
+          >
+          <h2 class="section-title" data-i18n="section_title_services">
+            Layanan Akademik & Administrasi
+          </h2>
+          <p class="section-subtitle" data-i18n="section_subtitle_services">
+            Akses cepat ke berbagai aplikasi utama untuk menunjang kegiatan
+            belajar mengajar dan administrasi di kampus.
+          </p>
         </div>
+
+        <div class="apps-grid">
+          <!-- App Card 1: Akademik -->
+          <a
+            href="https://akademik.polman-bandung.ac.id/"
+            target="_blank"
+            class="app-card"
+          >
+            <div class="app-icon-wrapper">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="app-title" data-i18n="app_1_title">Sistem Akademik</h3>
+            <p class="app-desc" data-i18n="app_1_desc">
+              Portal informasi dan administrasi akademik bagi mahasiswa dan
+              dosen Politeknik Manufaktur Bandung.
+            </p>
+            <span class="app-link" data-i18n="app_1_link"
+              >Akses Sistem <i class="fas fa-arrow-right"></i
+            ></span>
+          </a>
+
+          <!-- App Card 2: LMS -->
+          <a
+            href="https://belajar.polman-bandung.ac.id/"
+            target="_blank"
+            class="app-card"
+          >
+            <div class="app-icon-wrapper">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 class="app-title" data-i18n="app_2_title">
+              LMS Belajar Polman
+            </h3>
+            <p class="app-desc" data-i18n="app_2_desc">
+              Learning Management System untuk mendukung proses pembelajaran
+              daring yang interaktif dan efektif.
+            </p>
+            <span class="app-link" data-i18n="app_2_link"
+              >Masuk ke Kelas <i class="fas fa-arrow-right"></i
+            ></span>
+          </a>
+
+          <!-- App Card 3: Kepegawaian -->
+          <a
+            href="https://kepegawaian.polman-bandung.ac.id/"
+            target="_blank"
+            class="app-card"
+          >
+            <div class="app-icon-wrapper">
+              <i class="fas fa-id-badge"></i>
+            </div>
+            <h3 class="app-title" data-i18n="app_3_title">Kepegawaian</h3>
+            <p class="app-desc" data-i18n="app_3_desc">
+              Sistem informasi untuk pengelolaan data SDM, presensi, dan layanan
+              administrasi kepegawaian internal.
+            </p>
+            <span class="app-link" data-i18n="app_3_link"
+              >Akses Sistem <i class="fas fa-arrow-right"></i
+            ></span>
+          </a>
+
+          <!-- App Card 4: Keuangan -->
+          <a
+            href="https://keuangan.polman-bandung.ac.id/tentang-baak/"
+            target="_blank"
+            class="app-card"
+          >
+            <div class="app-icon-wrapper">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            <h3 class="app-title" data-i18n="app_4_title">Keuangan BAAK</h3>
+            <p class="app-desc" data-i18n="app_4_desc">
+              Portal layanan administrasi keuangan, informasi pembayaran UKT,
+              dan layanan kebendaharaan.
+            </p>
+            <span class="app-link" data-i18n="app_4_link"
+              >Akses Sistem <i class="fas fa-arrow-right"></i
+            ></span>
+          </a>
+
+          <!-- App Card 5: Logistik -->
+          <a
+            href="https://logistik.polman-bandung.ac.id/"
+            target="_blank"
+            class="app-card"
+          >
+            <div class="app-icon-wrapper">
+              <i class="fas fa-boxes-stacked"></i>
+            </div>
+            <h3 class="app-title" data-i18n="app_5_title">Sistem Logistik</h3>
+            <p class="app-desc" data-i18n="app_5_desc">
+              Pengelolaan inventaris, peminjaman alat praktik, dan pengadaan
+              barang kebutuhan kampus.
+            </p>
+            <span class="app-link" data-i18n="app_5_link"
+              >Akses Sistem <i class="fas fa-arrow-right"></i
+            ></span>
+          </a>
+
+          <!-- App Card 6: User Guide -->
+          <a
+            href="https://panduan.polman-bandung.ac.id/"
+            target="_blank"
+            class="app-card"
+          >
+            <div class="app-icon-wrapper">
+              <i class="fas fa-book"></i>
+            </div>
+            <h3 class="app-title" data-i18n="app_6_title">Panduan Pengguna</h3>
+            <p class="app-desc" data-i18n="app_6_desc">
+              Dokumentasi lengkap dan tata cara penggunaan berbagai sistem
+              digital di lingkungan Polman Bandung.
+            </p>
+            <span class="app-link" data-i18n="app_6_link"
+              >Baca Panduan <i class="fas fa-arrow-right"></i
+            ></span>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- 4. BERITA TERKINI SECTION -->
     <section class="section news-section" id="berita">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge" data-i18n="news_badge">Informasi Terkini</span>
-                <h2 class="section-title" data-i18n="news_title">Berita Seputar Kampus</h2>
-                <p class="section-subtitle" data-i18n="news_subtitle">
-                    Ikuti perkembangan terbaru, pengumuman penting, dan prestasi mahasiswa Politeknik Manufaktur Bandung.
-                </p>
-            </div>
-            
-            <div class="news-grid">
-                <!-- News 1 -->
-                <article class="news-card">
-                    <div class="news-img-wrapper">
-                        <span class="news-category" data-i18n="news_1_cat">Akademik</span>
-                        <img src="assets/pendaftaran.png" alt="Pendaftaran Mahasiswa Baru" class="news-image">
-                    </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-meta-item"><i class="far fa-calendar-alt"></i> 12 Mei 2026</span>
-                            <span class="news-meta-item"><i class="far fa-user"></i> Humas Polman</span>
-                        </div>
-                        <h3 class="news-title" data-i18n="news_1_title">Pendaftaran Mahasiswa Baru Tahun Ajaran 2026/2027 Resmi Dibuka</h3>
-                        <p class="news-desc" data-i18n="news_1_desc">Politeknik Manufaktur Bandung membuka penerimaan mahasiswa baru melalui beberapa jalur seleksi. Persiapkan diri Anda untuk bergabung bersama kampus vokasi manufaktur terbaik.</p>
-                        <a href="#" class="app-link" data-i18n="news_read_more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                
-                <!-- News 2 -->
-                <article class="news-card">
-                    <div class="news-img-wrapper">
-                        <span class="news-category" data-i18n="news_2_cat">Prestasi</span>
-                        <img src="assets/juara.png" alt="Prestasi Mahasiswa" class="news-image">
-                    </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-meta-item"><i class="far fa-calendar-alt"></i> 05 Mei 2026</span>
-                            <span class="news-meta-item"><i class="far fa-user"></i> Kemahasiswaan</span>
-                        </div>
-                        <h3 class="news-title" data-i18n="news_2_title">Tim Robotik Polman Berhasil Meraih Juara 1 Tingkat Nasional</h3>
-                        <p class="news-desc" data-i18n="news_2_desc">Keberhasilan luar biasa diraih oleh tim UKM Robotik pada ajang Kontes Robot Indonesia 2026. Ini membuktikan kualitas pendidikan vokasi unggul yang diterapkan.</p>
-                        <a href="#" class="app-link" data-i18n="news_read_more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                
-                <!-- News 3 -->
-                <article class="news-card">
-                    <div class="news-img-wrapper">
-                        <span class="news-category" data-i18n="news_3_cat">Inovasi</span>
-                        <img src="assets/Itegrasi.jpeg" alt="Inovasi Kampus" class="news-image">
-                    </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-meta-item"><i class="far fa-calendar-alt"></i> 28 April 2026</span>
-                            <span class="news-meta-item"><i class="far fa-user"></i> Direktorat Inovasi</span>
-                        </div>
-                        <h3 class="news-title" data-i18n="news_3_title">Peluncuran Sistem Terintegrasi Baru untuk Optimalisasi Layanan Publik</h3>
-                        <p class="news-desc" data-i18n="news_3_desc">Sebagai bagian dari transformasi digital, Polman Bandung hari ini meresmikan platform layanan terpadu (SSO) untuk mempermudah akses sivitas akademika.</p>
-                        <a href="#" class="app-link" data-i18n="news_read_more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-            
-            <div class="flex justify-center" style="margin-top: var(--space-10);">
-                <a href="#" class="btn btn-outline-primary btn-lg" data-i18n="news_btn_all">Lihat Semua Berita <i class="fas fa-chevron-right"></i></a>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="news_badge"
+            >Informasi Terkini</span
+          >
+          <h2 class="section-title" data-i18n="news_title">
+            Berita Seputar Kampus
+          </h2>
+          <p class="section-subtitle" data-i18n="news_subtitle">
+            Ikuti perkembangan terbaru, pengumuman penting, dan prestasi
+            mahasiswa Politeknik Manufaktur Bandung.
+          </p>
         </div>
+
+        <div class="news-grid">
+          <!-- News 1 -->
+          <article class="news-card">
+            <div class="news-img-wrapper">
+              <span class="news-category" data-i18n="news_1_cat">Akademik</span>
+              <img
+                src="assets/pendaftaran.png"
+                alt="Pendaftaran Mahasiswa Baru"
+                class="news-image"
+              />
+            </div>
+            <div class="news-content">
+              <div class="news-meta">
+                <span class="news-meta-item"
+                  ><i class="far fa-calendar-alt"></i> 12 Mei 2026</span
+                >
+                <span class="news-meta-item"
+                  ><i class="far fa-user"></i> Humas Polman</span
+                >
+              </div>
+              <h3 class="news-title" data-i18n="news_1_title">
+                Pendaftaran Mahasiswa Baru Tahun Ajaran 2026/2027 Resmi Dibuka
+              </h3>
+              <p class="news-desc" data-i18n="news_1_desc">
+                Politeknik Manufaktur Bandung membuka penerimaan mahasiswa baru
+                melalui beberapa jalur seleksi. Persiapkan diri Anda untuk
+                bergabung bersama kampus vokasi manufaktur terbaik.
+              </p>
+              <a href="#" class="app-link" data-i18n="news_read_more"
+                >Baca Selengkapnya <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- News 2 -->
+          <article class="news-card">
+            <div class="news-img-wrapper">
+              <span class="news-category" data-i18n="news_2_cat">Prestasi</span>
+              <img
+                src="assets/juara.png"
+                alt="Prestasi Mahasiswa"
+                class="news-image"
+              />
+            </div>
+            <div class="news-content">
+              <div class="news-meta">
+                <span class="news-meta-item"
+                  ><i class="far fa-calendar-alt"></i> 05 Mei 2026</span
+                >
+                <span class="news-meta-item"
+                  ><i class="far fa-user"></i> Kemahasiswaan</span
+                >
+              </div>
+              <h3 class="news-title" data-i18n="news_2_title">
+                Tim Robotik Polman Berhasil Meraih Juara 1 Tingkat Nasional
+              </h3>
+              <p class="news-desc" data-i18n="news_2_desc">
+                Keberhasilan luar biasa diraih oleh tim UKM Robotik pada ajang
+                Kontes Robot Indonesia 2026. Ini membuktikan kualitas pendidikan
+                vokasi unggul yang diterapkan.
+              </p>
+              <a href="#" class="app-link" data-i18n="news_read_more"
+                >Baca Selengkapnya <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- News 3 -->
+          <article class="news-card">
+            <div class="news-img-wrapper">
+              <span class="news-category" data-i18n="news_3_cat">Inovasi</span>
+              <img
+                src="assets/Itegrasi.jpeg"
+                alt="Inovasi Kampus"
+                class="news-image"
+              />
+            </div>
+            <div class="news-content">
+              <div class="news-meta">
+                <span class="news-meta-item"
+                  ><i class="far fa-calendar-alt"></i> 28 April 2026</span
+                >
+                <span class="news-meta-item"
+                  ><i class="far fa-user"></i> Direktorat Inovasi</span
+                >
+              </div>
+              <h3 class="news-title" data-i18n="news_3_title">
+                Peluncuran Sistem Terintegrasi Baru untuk Optimalisasi Layanan
+                Publik
+              </h3>
+              <p class="news-desc" data-i18n="news_3_desc">
+                Sebagai bagian dari transformasi digital, Polman Bandung hari
+                ini meresmikan platform layanan terpadu (SSO) untuk mempermudah
+                akses sivitas akademika.
+              </p>
+              <a href="#" class="app-link" data-i18n="news_read_more"
+                >Baca Selengkapnya <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="flex justify-center" style="margin-top: var(--space-10)">
+          <a
+            href="#"
+            class="btn btn-outline-primary btn-lg"
+            data-i18n="news_btn_all"
+            >Lihat Semua Berita <i class="fas fa-chevron-right"></i
+          ></a>
+        </div>
+      </div>
     </section>
 
     <!-- 5. AGENDA / CALENDAR SECTION -->
     <section class="section agenda-section" id="agenda">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge" data-i18n="agenda_badge">Kalender Akademik</span>
-                <h2 class="section-title" data-i18n="agenda_title">Kalender & Agenda Kampus</h2>
-                <p class="section-subtitle" data-i18n="agenda_subtitle">
-                    Pantau jadwal penting perkuliahan, ujian, dan kegiatan kampus secara realtime.
-                </p>
-            </div>
-
-            <div class="calendar-agenda-wrapper">
-                <!-- Kalender Realtime -->
-                <div class="calendar-widget">
-                    <div class="calendar-header">
-                        <button class="calendar-nav-btn" id="cal-prev" aria-label="Bulan sebelumnya">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <h3 class="calendar-month-title" id="cal-month-title"></h3>
-                        <button class="calendar-nav-btn" id="cal-next" aria-label="Bulan berikutnya">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-                    <div class="calendar-days-header">
-                        <span data-i18n="cal_sun">Min</span><span data-i18n="cal_mon">Sen</span><span data-i18n="cal_tue">Sel</span><span data-i18n="cal_wed">Rab</span><span data-i18n="cal_thu">Kam</span><span data-i18n="cal_fri">Jum</span><span data-i18n="cal_sat">Sab</span>
-                    </div>
-                    <div class="calendar-grid" id="cal-grid"></div>
-                </div>
-
-                <!-- Agenda List -->
-                <div class="agenda-list-panel">
-                    <h3 class="agenda-panel-title" data-i18n="agenda_upcoming"><i class="fas fa-list-check"></i> Agenda Mendatang</h3>
-                    <div class="agenda-list" id="agenda-list">
-                        <!-- Agenda items populated by JS -->
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="agenda_badge"
+            >Kalender Akademik</span
+          >
+          <h2 class="section-title" data-i18n="agenda_title">
+            Kalender & Agenda Kampus
+          </h2>
+          <p class="section-subtitle" data-i18n="agenda_subtitle">
+            Pantau jadwal penting perkuliahan, ujian, dan kegiatan kampus secara
+            realtime.
+          </p>
         </div>
+
+        <div class="calendar-agenda-wrapper">
+          <!-- Kalender Realtime -->
+          <div class="calendar-widget">
+            <div class="calendar-header">
+              <button
+                class="calendar-nav-btn"
+                id="cal-prev"
+                aria-label="Bulan sebelumnya"
+              >
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <h3 class="calendar-month-title" id="cal-month-title"></h3>
+              <button
+                class="calendar-nav-btn"
+                id="cal-next"
+                aria-label="Bulan berikutnya"
+              >
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+            <div class="calendar-days-header">
+              <span data-i18n="cal_sun">Min</span
+              ><span data-i18n="cal_mon">Sen</span
+              ><span data-i18n="cal_tue">Sel</span
+              ><span data-i18n="cal_wed">Rab</span
+              ><span data-i18n="cal_thu">Kam</span
+              ><span data-i18n="cal_fri">Jum</span
+              ><span data-i18n="cal_sat">Sab</span>
+            </div>
+            <div class="calendar-grid" id="cal-grid"></div>
+          </div>
+
+          <!-- Agenda List -->
+          <div class="agenda-list-panel">
+            <h3 class="agenda-panel-title" data-i18n="agenda_upcoming">
+              <i class="fas fa-list-check"></i> Agenda Mendatang
+            </h3>
+            <div class="agenda-list" id="agenda-list">
+              <!-- Agenda items populated by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 6. HELP DESK / CTA SECTION -->
-    <section class="section" style="padding: var(--space-10) 0;" id="helpdesk">
-        <div class="container">
-            <div class="cta-section" style="border-radius: var(--radius-2xl);">
-                <div class="cta-bg"></div>
-                <div class="cta-container">
-                    <div class="cta-content">
-                        <h2 class="cta-title" data-i18n="help_title">Butuh Bantuan Teknis?</h2>
-                        <p class="cta-desc" data-i18n="help_desc">Tim IT Support kami siap membantu Anda menyelesaikan masalah akses akun, lupa password, atau error pada sistem.</p>
-                    </div>
-                    <div class="cta-actions">
-                        <a href="#" class="btn btn-accent btn-lg font-bold" data-i18n="help_btn_ticket">
-                            <i class="fas fa-ticket-alt"></i> Buat Tiket Bantuan
-                        </a>
-                        <a href="https://wa.me/" class="btn btn-outline-white btn-lg" data-i18n="help_btn_chat">
-                            <i class="fab fa-whatsapp"></i> Chat Admin IT
-                        </a>
-                    </div>
-                </div>
+    <section class="section" style="padding: var(--space-10) 0" id="helpdesk">
+      <div class="container">
+        <div class="cta-section" style="border-radius: var(--radius-2xl)">
+          <div class="cta-bg"></div>
+          <div class="cta-container">
+            <div class="cta-content">
+              <h2 class="cta-title" data-i18n="help_title">
+                Butuh Bantuan Teknis?
+              </h2>
+              <p class="cta-desc" data-i18n="help_desc">
+                Tim IT Support kami siap membantu Anda menyelesaikan masalah
+                akses akun, lupa password, atau error pada sistem.
+              </p>
             </div>
+            <div class="cta-actions">
+              <a
+                href="#"
+                class="btn btn-accent btn-lg font-bold"
+                data-i18n="help_btn_ticket"
+              >
+                <i class="fas fa-ticket-alt"></i> Buat Tiket Bantuan
+              </a>
+              <a
+                href="https://wa.me/"
+                class="btn btn-outline-white btn-lg"
+                data-i18n="help_btn_chat"
+              >
+                <i class="fab fa-whatsapp"></i> Chat Admin IT
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- 7. FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <p class="footer-desc" data-i18n="footer_desc">
-                        Politeknik Manufaktur Bandung (Polman Bandung) merupakan institusi pendidikan tinggi vokasi negeri pertama di Indonesia yang berfokus pada teknologi manufaktur.
-                    </p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/polmanbandung/" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://twitter.com/polman_bandung" target="_blank" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/polman_bandung/" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@POLMAN.BANDUNG" target="_blank" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="footer-title" data-i18n="footer_links_title">Tautan Cepat</h3>
-                    <div class="footer-links">
-                        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> <span data-i18n="footer_link_main">Website Utama</span></a>
-                        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> <span data-i18n="footer_link_pmb">PMB Polman</span></a>
-                        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> <span data-i18n="footer_link_lib">Perpustakaan</span></a>
-                        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> <span data-i18n="footer_link_career">Karir & Alumni</span></a>
-                        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> <span data-i18n="footer_link_journal">Jurnal Ilmiah</span></a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="footer-title" data-i18n="footer_sys_title">Layanan Sistem</h3>
-                    <div class="footer-links">
-                        <a href="https://akademik.polman-bandung.ac.id/" class="footer-link"><i class="fas fa-chevron-right"></i> SIAK</a>
-                        <a href="https://belajar.polman-bandung.ac.id/" class="footer-link"><i class="fas fa-chevron-right"></i> LMS Belajar</a>
-                        <a href="https://kepegawaian.polman-bandung.ac.id/" class="footer-link"><i class="fas fa-chevron-right"></i> Kepegawaian</a>
-                        <a href="https://keuangan.polman-bandung.ac.id/tentang-baak/" class="footer-link"><i class="fas fa-chevron-right"></i> Keuangan</a>
-                        <a href="https://logistik.polman-bandung.ac.id/" class="footer-link"><i class="fas fa-chevron-right"></i> Logistik</a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="footer-title" data-i18n="footer_contact_title">Hubungi Kami</h3>
-                    <div class="footer-contact">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt contact-icon"></i>
-                            <p>Jl. Kanayakan No.21, Dago, Kecamatan Coblong, Kota Bandung, Jawa Barat 40135</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone-alt contact-icon"></i>
-                            <p>+62 22 2500241</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope contact-icon"></i>
-                            <p>sekretariat@polman-bandung.ac.id</p>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <p class="footer-desc" data-i18n="footer_desc">
+              Politeknik Manufaktur Bandung (Polman Bandung) merupakan institusi
+              pendidikan tinggi vokasi negeri pertama di Indonesia yang berfokus
+              pada teknologi manufaktur.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/polmanbandung/"
+                target="_blank"
+                class="social-link"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://twitter.com/polman_bandung"
+                target="_blank"
+                class="social-link"
+                aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/polman_bandung/"
+                target="_blank"
+                class="social-link"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@POLMAN.BANDUNG"
+                target="_blank"
+                class="social-link"
+                aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
             </div>
-            
-            <div class="footer-bottom">
-                <p data-i18n="footer_copyright">&copy; 2026 Politeknik Manufaktur Bandung. Hak Cipta Dilindungi.</p>
-                <div class="footer-bottom-links">
-                    <a href="#" data-i18n="footer_privacy">Kebijakan Privasi</a>
-                    <a href="#" data-i18n="footer_terms">Syarat & Ketentuan</a>
-                    <a href="#" data-i18n="footer_sitemap">Sitemap</a>
-                </div>
+          </div>
+
+          <div>
+            <h3 class="footer-title" data-i18n="footer_links_title">
+              Tautan Cepat
+            </h3>
+            <div class="footer-links">
+              <a href="#" class="footer-link"
+                ><i class="fas fa-chevron-right"></i>
+                <span data-i18n="footer_link_main">Website Utama</span></a
+              >
+              <a href="#" class="footer-link"
+                ><i class="fas fa-chevron-right"></i>
+                <span data-i18n="footer_link_pmb">PMB Polman</span></a
+              >
+              <a href="#" class="footer-link"
+                ><i class="fas fa-chevron-right"></i>
+                <span data-i18n="footer_link_lib">Perpustakaan</span></a
+              >
+              <a href="#" class="footer-link"
+                ><i class="fas fa-chevron-right"></i>
+                <span data-i18n="footer_link_career">Karir & Alumni</span></a
+              >
+              <a href="#" class="footer-link"
+                ><i class="fas fa-chevron-right"></i>
+                <span data-i18n="footer_link_journal">Jurnal Ilmiah</span></a
+              >
             </div>
+          </div>
+
+          <div>
+            <h3 class="footer-title" data-i18n="footer_sys_title">
+              Layanan Sistem
+            </h3>
+            <div class="footer-links">
+              <a
+                href="https://akademik.polman-bandung.ac.id/"
+                class="footer-link"
+                ><i class="fas fa-chevron-right"></i> SIAK</a
+              >
+              <a
+                href="https://belajar.polman-bandung.ac.id/"
+                class="footer-link"
+                ><i class="fas fa-chevron-right"></i> LMS Belajar</a
+              >
+              <a
+                href="https://kepegawaian.polman-bandung.ac.id/"
+                class="footer-link"
+                ><i class="fas fa-chevron-right"></i> Kepegawaian</a
+              >
+              <a
+                href="https://keuangan.polman-bandung.ac.id/tentang-baak/"
+                class="footer-link"
+                ><i class="fas fa-chevron-right"></i> Keuangan</a
+              >
+              <a
+                href="https://logistik.polman-bandung.ac.id/"
+                class="footer-link"
+                ><i class="fas fa-chevron-right"></i> Logistik</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h3 class="footer-title" data-i18n="footer_contact_title">
+              Hubungi Kami
+            </h3>
+            <div class="footer-contact">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt contact-icon"></i>
+                <p>
+                  Jl. Kanayakan No.21, Dago, Kecamatan Coblong, Kota Bandung,
+                  Jawa Barat 40135
+                </p>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone-alt contact-icon"></i>
+                <p>+62 22 2500241</p>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope contact-icon"></i>
+                <p>sekretariat@polman-bandung.ac.id</p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p data-i18n="footer_copyright">
+            &copy; 2026 Politeknik Manufaktur Bandung. Hak Cipta Dilindungi.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="#" data-i18n="footer_privacy">Kebijakan Privasi</a>
+            <a href="#" data-i18n="footer_terms">Syarat & Ketentuan</a>
+            <a href="#" data-i18n="footer_sitemap">Sitemap</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- 8. FLOATING ACCESSIBILITY & LANGUAGE WIDGET -->
     <div class="a11y-widget-container">
-        <!-- Language Switcher -->
-        <div class="lang-switcher">
-            <button class="lang-btn" data-lang="en" aria-label="English">
-                <img src="https://flagcdn.com/w40/gb.png" alt="UK Flag">
-            </button>
-            <button class="lang-btn active" data-lang="id" aria-label="Bahasa Indonesia">
-                <img src="https://flagcdn.com/w40/id.png" alt="ID Flag">
-            </button>
-        </div>
-
-        <!-- Accessibility Toggle -->
-        <button class="a11y-toggle-btn" id="a11y-toggle-btn" aria-label="Buka Menu Aksesibilitas">
-            <i class="fas fa-wheelchair"></i>
+      <!-- Language Switcher -->
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en" aria-label="English">
+          <img src="https://flagcdn.com/w40/gb.png" alt="UK Flag" />
         </button>
+        <button
+          class="lang-btn active"
+          data-lang="id"
+          aria-label="Bahasa Indonesia"
+        >
+          <img src="https://flagcdn.com/w40/id.png" alt="ID Flag" />
+        </button>
+      </div>
+
+      <!-- Accessibility Toggle -->
+      <button
+        class="a11y-toggle-btn"
+        id="a11y-toggle-btn"
+        aria-label="Buka Menu Aksesibilitas"
+      >
+        <i class="fas fa-wheelchair"></i>
+      </button>
     </div>
 
     <!-- Accessibility Modal -->
     <div class="a11y-modal" id="a11y-modal">
-        <div class="a11y-modal-header">
-            <h3 data-i18n="a11y_title">Menu Aksesibilitas (CTRL+U)</h3>
-            <button class="a11y-close-btn" id="a11y-close-btn" aria-label="Tutup">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="a11y-modal-body">
-            <button class="a11y-feature-btn" data-feature="high-contrast">
-                <i class="fas fa-adjust"></i>
-                <span data-i18n="a11y_contrast">Kontras +</span>
-            </button>
-            <button class="a11y-feature-btn" data-feature="highlight-links">
-                <i class="fas fa-link"></i>
-                <span data-i18n="a11y_highlight">Sorot tautan</span>
-            </button>
-            <button class="a11y-feature-btn" data-feature="bigger-text">
-                <i class="fas fa-text-height"></i>
-                <span data-i18n="a11y_bigger_text">Teks Lebih Besar</span>
-            </button>
-            <button class="a11y-feature-btn" data-feature="text-spacing">
-                <i class="fas fa-text-width"></i>
-                <span data-i18n="a11y_spacing">Spasi teks</span>
-            </button>
-            <button class="a11y-feature-btn" data-feature="pause-animations">
-                <i class="fas fa-pause-circle"></i>
-                <span data-i18n="a11y_pause">Animasi dijeda</span>
-            </button>
-            <button class="a11y-feature-btn" data-feature="hide-images">
-                <i class="far fa-image"></i>
-                <span data-i18n="a11y_hide_img">Sembunyikan Gambar</span>
-            </button>
-            <button class="a11y-feature-btn" data-feature="dyslexia">
-                <i class="fas fa-font"></i>
-                <span data-i18n="a11y_dyslexia">Ramah Disleksia</span>
-            </button>
-            <button class="a11y-feature-btn" data-feature="big-cursor">
-                <i class="fas fa-mouse-pointer"></i>
-                <span data-i18n="a11y_cursor">Kursor</span>
-            </button>
-            <button class="a11y-feature-btn" data-feature="tooltips">
-                <i class="fas fa-comment-alt"></i>
-                <span data-i18n="a11y_tooltips">Keterangan alat</span>
-            </button>
-            <button class="a11y-feature-btn" data-feature="line-height">
-                <i class="fas fa-arrows-alt-v"></i>
-                <span data-i18n="a11y_line_height">Tinggi garis</span>
-            </button>
-        </div>
-        <div class="a11y-modal-footer">
-            <button class="btn btn-primary" id="a11y-reset-btn" style="width: 100%;" data-i18n="a11y_reset">Reset Pengaturan</button>
-        </div>
+      <div class="a11y-modal-header">
+        <h3 data-i18n="a11y_title">Menu Aksesibilitas (CTRL+U)</h3>
+        <button class="a11y-close-btn" id="a11y-close-btn" aria-label="Tutup">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="a11y-modal-body">
+        <button class="a11y-feature-btn" data-feature="high-contrast">
+          <i class="fas fa-adjust"></i>
+          <span data-i18n="a11y_contrast">Kontras +</span>
+        </button>
+        <button class="a11y-feature-btn" data-feature="highlight-links">
+          <i class="fas fa-link"></i>
+          <span data-i18n="a11y_highlight">Sorot tautan</span>
+        </button>
+        <button class="a11y-feature-btn" data-feature="bigger-text">
+          <i class="fas fa-text-height"></i>
+          <span data-i18n="a11y_bigger_text">Teks Lebih Besar</span>
+        </button>
+        <button class="a11y-feature-btn" data-feature="text-spacing">
+          <i class="fas fa-text-width"></i>
+          <span data-i18n="a11y_spacing">Spasi teks</span>
+        </button>
+        <button class="a11y-feature-btn" data-feature="pause-animations">
+          <i class="fas fa-pause-circle"></i>
+          <span data-i18n="a11y_pause">Animasi dijeda</span>
+        </button>
+        <button class="a11y-feature-btn" data-feature="hide-images">
+          <i class="far fa-image"></i>
+          <span data-i18n="a11y_hide_img">Sembunyikan Gambar</span>
+        </button>
+        <button class="a11y-feature-btn" data-feature="dyslexia">
+          <i class="fas fa-font"></i>
+          <span data-i18n="a11y_dyslexia">Ramah Disleksia</span>
+        </button>
+        <button class="a11y-feature-btn" data-feature="big-cursor">
+          <i class="fas fa-mouse-pointer"></i>
+          <span data-i18n="a11y_cursor">Kursor</span>
+        </button>
+        <button class="a11y-feature-btn" data-feature="tooltips">
+          <i class="fas fa-comment-alt"></i>
+          <span data-i18n="a11y_tooltips">Keterangan alat</span>
+        </button>
+        <button class="a11y-feature-btn" data-feature="line-height">
+          <i class="fas fa-arrows-alt-v"></i>
+          <span data-i18n="a11y_line_height">Tinggi garis</span>
+        </button>
+      </div>
+      <div class="a11y-modal-footer">
+        <button
+          class="btn btn-primary"
+          id="a11y-reset-btn"
+          style="width: 100%"
+          data-i18n="a11y_reset"
+        >
+          Reset Pengaturan
+        </button>
+      </div>
     </div>
 
     <!-- Search Modal Overlay -->
     <div class="search-overlay" id="search-overlay">
-        <div class="search-modal">
-            <div class="search-modal-header">
-                <div class="search-input-wrapper">
-                    <i class="fas fa-search search-input-icon"></i>
-                    <input type="text" id="search-input" class="search-input" placeholder="Cari layanan, sistem, atau informasi..." data-i18n-placeholder="search_placeholder" autocomplete="off">
-                </div>
-                <button class="search-close-btn" id="search-close-btn" aria-label="Tutup pencarian">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="search-results" id="search-results">
-                <div class="search-hint">
-                    <i class="fas fa-lightbulb"></i>
-                    <span>Ketik untuk mencari layanan seperti "Akademik", "LMS", "Keuangan"...</span>
-                </div>
-            </div>
+      <div class="search-modal">
+        <div class="search-modal-header">
+          <div class="search-input-wrapper">
+            <i class="fas fa-search search-input-icon"></i>
+            <input
+              type="text"
+              id="search-input"
+              class="search-input"
+              placeholder="Cari layanan, sistem, atau informasi..."
+              data-i18n-placeholder="search_placeholder"
+              autocomplete="off"
+            />
+          </div>
+          <button
+            class="search-close-btn"
+            id="search-close-btn"
+            aria-label="Tutup pencarian"
+          >
+            <i class="fas fa-times"></i>
+          </button>
         </div>
+        <div class="search-results" id="search-results">
+          <div class="search-hint">
+            <i class="fas fa-lightbulb"></i>
+            <span
+              >Ketik untuk mencari layanan seperti "Akademik", "LMS",
+              "Keuangan"...</span
+            >
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
