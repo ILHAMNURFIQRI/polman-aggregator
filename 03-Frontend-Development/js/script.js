@@ -828,4 +828,74 @@ document.addEventListener('DOMContentLoaded', () => {
     // Apply saved settings on load
     applyA11ySettings();
 
+    // ============================================================
+    // 9. Hero Slider Logic & Dots
+    // ============================================================
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroDots = document.querySelectorAll('.hero-dot');
+    
+    if (heroSlides.length > 0) {
+        let currentSlide = 0;
+        let slideInterval;
+
+        const showSlide = (index) => {
+            heroSlides.forEach(slide => slide.classList.remove('active'));
+            if (heroDots.length > 0) {
+                heroDots.forEach(dot => {
+                    dot.classList.remove('active');
+                    dot.setAttribute('aria-selected', 'false');
+                });
+            }
+            
+            heroSlides[index].classList.add('active');
+            if (heroDots.length > 0) {
+                heroDots[index].classList.add('active');
+                heroDots[index].setAttribute('aria-selected', 'true');
+            }
+            currentSlide = index;
+        };
+
+        const nextSlide = () => {
+            let next = (currentSlide + 1) % heroSlides.length;
+            showSlide(next);
+        };
+
+        // Initialize auto slide
+        slideInterval = setInterval(nextSlide, 5000);
+
+        // Dot click handlers
+        if (heroDots.length > 0) {
+            heroDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    clearInterval(slideInterval); // stop auto play on manual click
+                    showSlide(index);
+                    slideInterval = setInterval(nextSlide, 5000); // restart auto play
+                });
+            });
+        }
+    }
+
+    // ============================================================
+    // 10. FAQ Accordion Logic
+    // ============================================================
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            const isOpen = faqItem.classList.contains('open');
+
+            // Close all other FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('open');
+                item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
+
+            // If it wasn't open before, open it now
+            if (!isOpen) {
+                faqItem.classList.add('open');
+                question.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+
 });

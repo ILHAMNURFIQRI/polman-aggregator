@@ -77,61 +77,12 @@
 
     <!-- 2. HERO SECTION -->
     <section class="hero" id="beranda">
-      <!-- SVG Geometri dari Pengguna sebagai Background -->
-      <svg
-        class="hero-bg"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 300"
-        width="100%"
-        height="100%"
-        preserveAspectRatio="xMidYMid slice"
-      >
-        <rect width="1200" height="300" fill="#F8FAFC" />
-        <rect x="0" y="0" width="100" height="100" fill="#142240" />
-        <path d="M 100,0 A 100,100 0 0,1 0,100 L 100,100 Z" fill="#6F747A" />
-        <path d="M 100,0 L 200,100 H 100 Z" fill="#3B82F6" />
-        <circle cx="250" cy="50" r="50" fill="#A5ACB5" />
-        <rect x="300" y="0" width="100" height="100" fill="#142240" />
-        <circle cx="300" cy="0" r="100" fill="#F8FAFC" />
-        <rect x="400" y="0" width="100" height="100" fill="#6F747A" />
-        <path d="M 500,100 A 50,50 0 0,1 600,100 Z" fill="#3B82F6" />
-        <path d="M 600,0 L 700,0 L 700,100 Z" fill="#142240" />
-        <circle cx="750" cy="50" r="50" fill="#3B82F6" />
-        <rect x="800" y="0" width="100" height="100" fill="#A5ACB5" />
-        <path d="M 900,0 A 100,100 0 0,0 1000,100 L 1000,0 Z" fill="#142240" />
-        <path d="M 1000,100 L 1100,0 V 100 Z" fill="#6F747A" />
-        <rect x="1100" y="0" width="100" height="100" fill="#3B82F6" />
-        <path d="M 0,100 A 100,100 0 0,0 100,200 V 100 Z" fill="#3B82F6" />
-        <rect x="100" y="100" width="100" height="100" fill="#142240" />
-        <path d="M 200,100 L 300,200 V 100 Z" fill="#6F747A" />
-        <circle cx="350" cy="150" r="50" fill="#3B82F6" />
-        <path d="M 400,100 H 500 V 200 Z" fill="#142240" />
-        <rect x="500" y="100" width="100" height="100" fill="#A5ACB5" />
-        <circle cx="650" cy="150" r="50" fill="#6F747A" />
-        <path d="M 700,200 A 100,100 0 0,1 800,100 H 700 Z" fill="#142240" />
-        <path d="M 800,100 L 900,200 H 800 Z" fill="#3B82F6" />
-        <rect x="900" y="100" width="100" height="100" fill="#142240" />
-        <circle cx="1000" cy="200" r="100" fill="#F8FAFC" />
-        <path d="M 1100,100 A 100,100 0 0,0 1200,200 V 100 Z" fill="#A5ACB5" />
-        <rect x="0" y="200" width="100" height="100" fill="#6F747A" />
-        <path
-          d="M 100,200 A 100,100 0 0,1 200,300 L 100,300 Z"
-          fill="#142240"
-        />
-        <rect x="200" y="200" width="100" height="100" fill="#3B82F6" />
-        <path d="M 300,300 L 400,200 H 300 Z" fill="#A5ACB5" />
-        <circle cx="450" cy="250" r="50" fill="#142240" />
-        <path d="M 500,200 A 100,100 0 0,0 600,300 V 200 Z" fill="#3B82F6" />
-        <rect x="600" y="200" width="100" height="100" fill="#142240" />
-        <path d="M 700,200 L 800,300 V 200 Z" fill="#6F747A" />
-        <circle cx="850" cy="250" r="50" fill="#A5ACB5" />
-        <path
-          d="M 900,300 A 100,100 0 0,1 1000,200 L 900,200 Z"
-          fill="#3B82F6"
-        />
-        <rect x="1000" y="200" width="100" height="100" fill="#142240" />
-        <path d="M 1100,200 L 1200,300 H 1100 Z" fill="#6F747A" />
-      </svg>
+      <!-- Hero Slider Backgrounds -->
+      <div class="hero-slider">
+        <div class="hero-slide active" style="background-image: url('assets/lab-polman.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('assets/depan-polman.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('assets/kampus2.png')"></div>
+      </div>
       <div class="hero-overlay"></div>
 
       <div class="container hero-container">
@@ -165,69 +116,7 @@
           </div>
         </div>
 
-        <div class="hero-illustration">
-          <!-- Menggunakan mockup 3D dashboard atau ilustrasi yang relevan -->
-          <svg
-            viewBox="0 0 500 400"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="hero-image"
-          >
-            <rect
-              x="50"
-              y="50"
-              width="400"
-              height="280"
-              rx="16"
-              fill="#F8FAFC"
-              stroke="#ffffff"
-              stroke-width="4"
-            />
-            <rect
-              x="50"
-              y="50"
-              width="400"
-              height="50"
-              rx="16"
-              fill="#E5E7EA"
-            />
-            <circle cx="80" cy="75" r="6" fill="#EF4444" />
-            <circle cx="100" cy="75" r="6" fill="#F59E0B" />
-            <circle cx="120" cy="75" r="6" fill="#10B981" />
-            <rect
-              x="80"
-              y="130"
-              width="100"
-              height="80"
-              rx="8"
-              fill="#DBEAFE"
-            />
-            <rect
-              x="200"
-              y="130"
-              width="100"
-              height="80"
-              rx="8"
-              fill="#FEE2E2"
-            />
-            <rect
-              x="320"
-              y="130"
-              width="100"
-              height="80"
-              rx="8"
-              fill="#FEF3C7"
-            />
-            <rect
-              x="80"
-              y="240"
-              width="340"
-              height="60"
-              rx="8"
-              fill="#E5E7EA"
-            />
-          </svg>
-        </div>
+
       </div>
     </section>
 
